@@ -1,0 +1,319 @@
+/* Vichar marketing site — palette matches lib/presentation/design/tokens.dart */
+:root {
+  --ink: #07070B;
+  --ink-raised: #12121A;
+  --ink-border: #1F1F2B;
+  --amber: #F2A65A;
+  --amber-dim: #8A5E33;
+  --text-high: #F5F2EC;
+  --text-low: #8A8798;
+  --warning: #E5C07B;
+  --max-width: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text-high);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--amber); }
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header.site {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(7, 7, 11, 0.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--ink-border);
+}
+
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text-high);
+  text-decoration: none;
+}
+
+.brand .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 16px 4px rgba(242, 166, 90, 0.55);
+}
+
+nav.site-nav {
+  display: flex;
+  gap: 22px;
+  font-size: 15px;
+}
+
+nav.site-nav a {
+  color: var(--text-low);
+  text-decoration: none;
+}
+
+nav.site-nav a:hover { color: var(--text-high); }
+
+.hero {
+  padding: 84px 0 56px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 6vw, 56px);
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+
+.hero p.tagline {
+  color: var(--text-low);
+  font-size: clamp(16px, 2.4vw, 20px);
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+.badges {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--ink-border);
+  background: var(--ink-raised);
+  color: var(--text-high);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.store-badge .sub {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-low);
+}
+
+.coming-soon {
+  color: var(--text-low);
+  font-size: 13px;
+}
+
+section {
+  padding: 56px 0;
+  border-top: 1px solid var(--ink-border);
+}
+
+h2.section-title {
+  font-size: clamp(24px, 4vw, 32px);
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+p.section-sub {
+  text-align: center;
+  color: var(--text-low);
+  max-width: 620px;
+  margin: 0 auto 40px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: var(--ink-raised);
+  border: 1px solid var(--ink-border);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.feature-card .icon { font-size: 26px; margin-bottom: 10px; }
+
+.feature-card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--text-low);
+  font-size: 14.5px;
+}
+
+.shots {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 8px 4px 24px;
+  scroll-snap-type: x mandatory;
+}
+
+.shots img {
+  height: 560px;
+  width: auto;
+  border-radius: 28px;
+  border: 1px solid var(--ink-border);
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  background: var(--ink-raised);
+}
+
+.shots.ipad img { height: 480px; }
+
+.disclaimer-box {
+  background: var(--ink-raised);
+  border: 1px solid var(--amber-dim);
+  border-radius: 16px;
+  padding: 28px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.disclaimer-box h3 {
+  margin-top: 0;
+  color: var(--warning);
+}
+
+.disclaimer-box ul {
+  color: var(--text-low);
+  padding-left: 20px;
+}
+
+.disclaimer-box li { margin-bottom: 8px; }
+
+.privacy-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.privacy-points .point {
+  padding: 18px 20px;
+  background: var(--ink-raised);
+  border: 1px solid var(--ink-border);
+  border-radius: 14px;
+  font-size: 14.5px;
+  color: var(--text-low);
+}
+
+.privacy-points .point strong { color: var(--text-high); }
+
+.cta {
+  text-align: center;
+  padding: 64px 0 88px;
+}
+
+.cta h2 { font-size: clamp(26px, 4vw, 36px); margin-bottom: 12px; }
+.cta p { color: var(--text-low); margin-bottom: 28px; }
+
+footer.site {
+  border-top: 1px solid var(--ink-border);
+  padding: 32px 0 48px;
+  color: var(--text-low);
+  font-size: 13.5px;
+}
+
+footer.site .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer.site nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+footer.site nav a {
+  color: var(--text-low);
+  text-decoration: none;
+}
+
+footer.site nav a:hover { color: var(--text-high); }
+
+/* Legal pages */
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 24px 88px;
+}
+
+.legal h1 {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.legal .updated {
+  color: var(--text-low);
+  font-size: 13.5px;
+  margin-bottom: 40px;
+}
+
+.legal h2 {
+  font-size: 19px;
+  margin-top: 40px;
+  color: var(--amber);
+}
+
+.legal p, .legal li {
+  color: #D8D5CE;
+  font-size: 15.5px;
+}
+
+.legal ul { padding-left: 20px; }
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--text-low);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-link:hover { color: var(--text-high); }
+
+@media (max-width: 640px) {
+  nav.site-nav { display: none; }
+  .shots img { height: 420px; }
+  .shots.ipad img { height: 360px; }
+}

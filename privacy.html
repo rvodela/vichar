@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Vichar</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot"></span> Vichar</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="legal">
+  <a class="back-link" href="index.html">← Back to Vichar</a>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 28 September 2026</p>
+
+  <p>
+    Vichar ("the app", "we", "our") is developed by an independent developer.
+    This policy explains, plainly, what data the app touches and what happens
+    to it. Vichar is built around one rule: <strong>audio never leaves your
+    device.</strong> Everything below follows from that.
+  </p>
+
+  <h2>1. Recordings and transcripts</h2>
+  <p>
+    When you arm the alarm, Vichar records sound on your device. That audio
+    is written only to your phone's local storage. It is never uploaded to
+    any server, ours or anyone else's, at any subscription tier. Transcription
+    of that audio into text also happens entirely on-device, using your
+    phone's own operating-system speech recognition. We never see, receive,
+    or store a copy of your recordings or transcripts.
+  </p>
+  <p>
+    You can delete a night's audio, its transcript, or your entire recording
+    history at any time from within the app. Deleting the app removes
+    everything Vichar has stored on your device.
+  </p>
+
+  <h2>2. Optional AI interpretation ("Bring your own key")</h2>
+  <p>
+    Vichar can optionally send the <em>text</em> of a transcript — never
+    audio — to an AI provider you choose (OpenAI, Anthropic, Google Gemini,
+    or Groq) to generate a reading. This feature is off by default and only
+    activates once you paste in your own API key for that provider.
+  </p>
+  <ul>
+    <li>Your API key is stored using your device's secure credential storage (the platform keychain). We do not transmit it to our own servers, because we do not operate a server that sees it — requests go directly from your device to the provider you chose.</li>
+    <li>Only the transcript text relevant to your request is sent, along with the minimum context needed to generate a reading. Timestamps sent are clock times only, never full dates, so a provider cannot correlate requests across nights.</li>
+    <li>What that AI provider does with the text you send it is governed by <em>their</em> privacy policy, not ours — please review the policy of whichever provider you choose to use.</li>
+    <li>If you never add a key, this feature does nothing and sends nothing anywhere.</li>
+  </ul>
+
+  <h2>3. Subscription and payment</h2>
+  <p>
+    Vichar's subscription is processed through the Apple App Store or Google
+    Play, and subscription status is managed using RevenueCat, a third-party
+    subscription infrastructure provider. RevenueCat receives a device
+    identifier and purchase/entitlement information necessary to verify your
+    subscription — it does not receive your recordings, transcripts, or AI
+    provider keys. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's privacy policy</a> for details on their handling of this data.
+  </p>
+  <p>
+    We do not receive or store your payment card details. Those are handled
+    entirely by Apple or Google.
+  </p>
+
+  <h2>4. Crash reporting</h2>
+  <p>
+    Vichar uses Firebase Crashlytics to help us find and fix bugs. If the app
+    crashes, a crash report is sent that includes technical diagnostic
+    information (device model, OS version, and the code location of the
+    crash). Before anything is sent, this report passes through a redaction
+    step that strips it of transcript text, AI provider keys, and other
+    content — only the technical shape of the crash is reported, never what
+    you said in your sleep.
+  </p>
+
+  <h2>5. What we don't do</h2>
+  <ul>
+    <li>We don't require an account, a sign-up, or an email address to use Vichar.</li>
+    <li>We don't sell, rent, or share your data with advertisers.</li>
+    <li>We don't run any analytics or tracking beyond the crash reporting described above.</li>
+    <li>We don't use your recordings or transcripts to train any AI model, ours or anyone else's.</li>
+  </ul>
+
+  <h2>6. Children's privacy</h2>
+  <p>
+    Vichar is not directed at children under 13, and we do not knowingly
+    collect data from children under that age.
+  </p>
+
+  <h2>7. Your choices</h2>
+  <p>
+    You can, at any time and entirely within the app: delete individual
+    nights, delete recorded audio while keeping a transcript, clear an AI
+    provider key, or delete the app to remove all local data. Because nothing
+    is stored on a server we control, there is no separate "delete my data"
+    request to make of us for your recordings or transcripts — removing them
+    from your device removes them, full stop.
+  </p>
+
+  <h2>8. Changes to this policy</h2>
+  <p>
+    If this policy changes, the "last updated" date above will change with
+    it. Material changes will be reflected in the app's release notes.
+  </p>
+
+  <h2>9. Contact</h2>
+  <p>
+    Questions about this policy or how Vichar handles data can be sent to
+    <a href="mailto:smvodela@yahoo.com">smvodela@yahoo.com</a>.
+  </p>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Vichar. All rights reserved.</span>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; EULA</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
